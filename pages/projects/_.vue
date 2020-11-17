@@ -18,6 +18,24 @@
           <nuxt-content :document="article" />
         </article>
       </div>
+      
+      <br />
+
+      <div class="container">
+        <span
+          class="mr-4"
+          v-for="button in article.buttons"
+          :key="button.text">
+          <b-button
+            type="is-primary"
+            tag="a"
+            :href="button.href"
+            :icon-left="button.icon"
+            rounded>
+            {{ button.text }}
+          </b-button>
+        </span>
+      </div>
     </section>
   </div>
 </template>

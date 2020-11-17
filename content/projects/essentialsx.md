@@ -1,8 +1,17 @@
 ---
 title: EssentialsX
 description: One of the oldest and most widely-used Minecraft server mods in existence.
+context: "Maintainer of"
+image: essentialsx.png
 categories:
   - minecraft
+buttons:
+  - text: Visit website
+    href: https://essentialsx.net/
+    icon: home-outline
+  - text: View on GitHub
+    href: https://github.com/EssentialsX/Essentials
+    icon: github
 ---
 
 **EssentialsX** is an open-source general plugin for multiplayer Minecraft servers. It adds over 100 in-game commands to extend and enhance Minecraft gameplay and server administration, including player-to-player messaging and teleporting, displaying server information and moderation tools.

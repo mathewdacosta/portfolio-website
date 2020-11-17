@@ -16,12 +16,7 @@
     <section class="section" id="about">
       <div class="container has-text-centered">
         <div class="content">
-          <p>
-            I'm currently a student, working towards a degree in Computer Games Programming.
-          </p>
-          <p>
-            I also work on open-source Minecraft projects.
-          </p>
+          <nuxt-content :document="about" />
         </div>
       </div>
     </section>
@@ -55,7 +50,7 @@
           </template>
           <template slot="image">
             <img
-            :src="require('~/assets/pacman.png')"
+            :src="require('~/assets/images/pacman.png')"
             alt="Screenshot of Pacman"
             style="width: 100%; border-radius: 4px;" /> <!-- TODO better image -->
           </template>
@@ -85,7 +80,7 @@
           </template>
           <template slot="image">
             <img
-            :src="require('~/assets/tricky-goals.jpg')"
+            :src="require('~/assets/images/tricky-goals.jpg')"
             alt="Screenshot of Pacman"
             style="width: 100%; border-radius: 4px;" /> <!-- TODO better image -->
           </template>
@@ -105,7 +100,7 @@
           </template>
           <template slot="image">
             <img
-            :src="require('~/assets/pacman.png')"
+            :src="require('~/assets/images/pacman.png')"
             alt="Screenshot of Pacman"
             style="width: 100%; border-radius: 4px;" /> <!-- TODO better image -->
           </template>
@@ -113,20 +108,19 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container has-text-centered">
-        <h1 class="title">Contact</h1>
+    <section class="hero is-dark is-medium" id="contact">
+      <div class="hero-body">
+        <h1 class="title has-text-centered">Contact</h1>
         <br />
         <nav class="level">
           <div class="level-item">
             <b-button
               type="is-primary"
               size="is-medium"
-              outlined
               rounded
               icon-left="linkedin"
               tag="a"
-              href="https://linkedin.com/in/mathew-dacosta"> <!-- TODO change -->
+              href="https://linkedin.com/in/mathew-dacosta">
               LinkedIn
             </b-button>
           </div>
@@ -134,7 +128,6 @@
             <b-button
               type="is-primary"
               size="is-medium"
-              outlined
               rounded
               icon-left="github"
               tag="a"
@@ -146,7 +139,6 @@
             <b-button
               type="is-primary"
               size="is-medium"
-              outlined
               rounded
               icon-left="twitter"
               tag="a"
@@ -168,6 +160,13 @@ export default {
 
   components: {
     ProjectOverview
+  },
+  async asyncData({ $content }) {
+    const about = await $content('about').fetch();
+
+    return {
+      about
+    };
   }
 }
 </script>

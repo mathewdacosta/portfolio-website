@@ -17,6 +17,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~/assets/scss/main.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -50,5 +51,6 @@ export default {
 
   // Buefy options (https://github.com/buefy/nuxt-buefy + https://buefy.org/documentation/constructor-options/)
   buefy: {
+    css: false // include our customised CSS instead
   }
 }
