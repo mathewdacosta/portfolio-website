@@ -29,6 +29,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@aceforth/nuxt-netlify'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
