@@ -11,7 +11,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section fullpage">
       <div class="container">
         <div class="columns">
           <nav class="column is-one-quarter">
@@ -59,22 +59,22 @@
 <script>
 export default {
   watchQuery: ['category'],
-  computed: {
-    category() {
-      return this.$route.query.category || 'all';
-    },
-    projectColumns() {
-      const columns = [[], [], []];
-
-      this.projects.forEach((project, index) => {
-        columns[index % 3].push(project)
-      })
-
-      return columns;
+  data () {
+    return {
+      projectColumns: [[], [], []]
     }
   },
+  computed: {
+    category () {
+      return this.$route.query.category || 'all';
+    }
+  },
+  beforeMount () {
+    this.setCategory(this.category)
+    this.updateColumns()
+  },
   methods: {
-    setCategory(category) {
+    setCategory (category) {
       this.$router.push({
         path: '/projects',
         query: {
@@ -82,14 +82,24 @@ export default {
           category
         }
       })
+      this.updateColumns()
+    },
+    updateColumns () {
+      const columns = [[], [], []];
+
+      this.projects
+        .filter(project => this.category == 'all' || project.categories.includes(this.category))
+        .forEach((project, index) => {
+          columns[index % 3].push(project)
+        })
+
+      this.projectColumns = columns;
     }
   },
   async asyncData ({ $content, app, query, error }) {
     const dir = `/projects`
-    const { category } = query;
     const filters = {
       dir,
-      categories: category ? { $contains: category } : undefined
     };
     const projects = await $content({ deep: true }).where(filters).fetch()
 
@@ -99,3 +109,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.fullpage {
+  min-height: 75vh;
+}
+</style>
