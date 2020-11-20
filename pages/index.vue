@@ -21,9 +21,9 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section has-background-dark" id="projects">
       <div class="container has-text-centered">
-        <h1 class="title">Projects</h1>
+        <h1 class="title section-title has-text-white">Projects</h1>
       </div>
     </section>
 
@@ -106,35 +106,32 @@
       </div>
     </section>
 
-    <section class="hero is-dark is-medium" id="contact">
-      <div class="hero-body">
-        <h1 class="title has-text-centered">Contact</h1>
+    <section class="section has-background-dark" id="contact">
+      <div class="container has-text-centered">
+        <h1 class="title section-title has-text-white">Contact</h1>
         <br />
-        <nav class="level">
-          <div class="level-item">
+        <nav class="columns is-centered">
+          <div class="column is-2 mx-4 has-text-centered">
             <round-button
-              type="is-primary"
-              size="is-medium"
-              rounded
+              expanded
               icon-left="linkedin"
               tag="a"
               href="https://linkedin.com/in/mathew-dacosta">
               LinkedIn
             </round-button>
           </div>
-          <div class="level-item">
+          <div class="column is-2 mx-4 has-text-centered">
             <round-button
-              type="is-primary"
-              size="is-medium"
-              rounded
+            expanded
               icon-left="github"
               tag="a"
               href="https://github.com/mdacoffee"> <!-- TODO change -->
               GitHub
             </round-button>
           </div>
-          <div class="level-item">
+          <div class="column is-2 mx-4 has-text-centered">
             <round-button
+            expanded
               icon-left="twitter"
               tag="a"
               href="https://twitter.com/mdacoffee"> <!-- TODO fix icon + link to prof twitter -->

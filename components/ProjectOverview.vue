@@ -16,10 +16,6 @@ export default {
       type: String,
       required: false,
       default: "left"
-    },
-    project: {
-      type: Object,
-      required: true
     }
   },
   computed: {
