@@ -11,7 +11,7 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered has-text-weight-semibold">
           <p>
             Website &copy; 2020 Mathew Dacosta.
           </p>

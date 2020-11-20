@@ -18,7 +18,7 @@
           <nuxt-content :document="article" />
         </article>
       </div>
-      
+
       <br />
 
       <div class="container">
@@ -26,14 +26,12 @@
           class="mr-4"
           v-for="button in article.buttons"
           :key="button.text">
-          <b-button
-            type="is-primary"
+          <round-button
             tag="a"
             :href="button.href"
-            :icon-left="button.icon"
-            rounded>
+            :icon-left="button.icon">
             {{ button.text }}
-          </b-button>
+          </round-button>
         </span>
       </div>
     </section>

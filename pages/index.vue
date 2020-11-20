@@ -38,14 +38,12 @@
               </p>
             </div>
             <div>
-              <b-button
-                type="is-primary"
-                rounded
+              <round-button
                 icon-left="github"
                 tag="a"
                 href="https://github.com/mdacoffee/FOGGS-Pacman"> <!-- TODO change -->
                 View source
-              </b-button>
+              </round-button>
             </div>
           </template>
           <template slot="image">
@@ -68,14 +66,14 @@
               </p>
             </div>
             <div>
-              <b-button
+              <round-button
                 type="is-primary"
                 rounded
                 icon-left="chevron-right-circle-outline"
                 tag="a"
                 href="https://mdcfe.itch.io/tricky-goals"> <!-- TODO change -->
                 View on Itch.io
-              </b-button>
+              </round-button>
             </div>
           </template>
           <template slot="image">
@@ -114,7 +112,7 @@
         <br />
         <nav class="level">
           <div class="level-item">
-            <b-button
+            <round-button
               type="is-primary"
               size="is-medium"
               rounded
@@ -122,10 +120,10 @@
               tag="a"
               href="https://linkedin.com/in/mathew-dacosta">
               LinkedIn
-            </b-button>
+            </round-button>
           </div>
           <div class="level-item">
-            <b-button
+            <round-button
               type="is-primary"
               size="is-medium"
               rounded
@@ -133,18 +131,15 @@
               tag="a"
               href="https://github.com/mdacoffee"> <!-- TODO change -->
               GitHub
-            </b-button>
+            </round-button>
           </div>
           <div class="level-item">
-            <b-button
-              type="is-primary"
-              size="is-medium"
-              rounded
+            <round-button
               icon-left="twitter"
               tag="a"
-              href="https://twitter.com/mdacoffee"> <!-- TODO change -->
+              href="https://twitter.com/mdacoffee"> <!-- TODO fix icon + link to prof twitter -->
               Twitter
-            </b-button>
+            </round-button>
           </div>
         </nav>
       </div>

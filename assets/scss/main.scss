@@ -1,8 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono);
+
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #4e7dfd;
+$primary: #046ec4;
 $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
 $primary-invert: findColorInvert($primary);
@@ -76,6 +78,13 @@ $colors: mergeColorMaps(
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+$family-monospace: "Roboto Mono", monospace;
+
+.section-title {
+    font-family: $family-monospace;
+    text-transform: uppercase;
+}
 
 // Import Bulma and Buefy styles
 @import "~bulma";

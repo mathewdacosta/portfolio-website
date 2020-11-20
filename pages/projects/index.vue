@@ -5,7 +5,7 @@
         <div class="container">
           <nav class="title breadcrumb is-large" aria-label="breadcrumbs">
             <ul>
-              <li class="is-active"><router-link to="/projects">Projects</router-link></li>
+              <li class="is-active is-family-secondary"><router-link to="/projects">Projects</router-link></li>
             </ul>
           </nav>
         </div>
@@ -17,7 +17,7 @@
           <nav class="column is-one-quarter">
             <b-menu>
               <b-menu-list label="Categories">
-                <b-menu-item label="All" :active="category == 'all'" @click="setCategory(null)" />
+                <b-menu-item label="All" :active="category == 'all'" @click="setCategory(undefined)" />
                 <b-menu-item label="Games" :active="category == 'games'" @click="setCategory('games')" />
                 <b-menu-item label="Ludum Dare" :active="category == 'ludum-dare'" @click="setCategory('ludum-dare')" />
                 <b-menu-item label="Minecraft" :active="category == 'minecraft'" @click="setCategory('minecraft')" />
@@ -28,27 +28,7 @@
           </nav>
 
           <div class="column">
-            <div class="tile is-ancestor">
-              <div class="tile is-parent is-vertical is-4"
-                v-for="(projectColumn, index) in projectColumns"
-                :key="`project_column_${index}`">
-                <router-link
-                  class="tile is-child box"
-                  v-for="project in projectColumn"
-                  :key="project.slug"
-                  :to="{ path: project.path }">
-                    <p v-if="project.image">
-                      <img
-                        :src="require(`~/assets/images/${project.image}`)"
-                        :alt="project.title"
-                        style="width: 100%; border-radius: 4px;" />
-                    </p>
-                    <p v-if="project.context" class="has-text-grey-light">{{ project.context }}</p>
-                    <p class="title is-size-4">{{ project.title }}</p>
-                    <p class="subtitle is-size-5">{{ project.description }}</p>
-                </router-link>
-              </div>
-            </div>
+            <project-tile-list :projects="projects" :category="category" />
           </div>
         </div>
       </div>
@@ -57,61 +37,36 @@
 </template>
 
 <script>
+import ProjectTileList from '~/components/ProjectTileList'
+
 export default {
-  watchQuery: ['category'],
+  async asyncData ({ $content, app, query, error }) {
+    const dir = `/projects`
+    const projects = await $content({ deep: true }).where({ dir }).fetch()
+
+    return {
+      projects
+    }
+  },
   data () {
     return {
-      projectColumns: [[], [], []]
+      category: this.$route.query.category
     }
-  },
-  computed: {
-    category () {
-      return this.$route.query.category || 'all';
-    }
-  },
-  beforeMount () {
-    this.setCategory(this.category)
-    this.updateColumns()
   },
   methods: {
     setCategory (category) {
-      this.$router.push({
+      this.category = category
+      this.$router.replace({
         path: '/projects',
         query: {
           ...this.$route.query,
           category
         }
       })
-      this.updateColumns()
-    },
-    updateColumns () {
-      const columns = [[], [], []];
-
-      this.projects
-        .filter(project => this.category == 'all' || project.categories.includes(this.category))
-        .forEach((project, index) => {
-          columns[index % 3].push(project)
-        })
-
-      this.projectColumns = columns;
     }
   },
-  async asyncData ({ $content, app, query, error }) {
-    const dir = `/projects`
-    const filters = {
-      dir,
-    };
-    const projects = await $content({ deep: true }).where(filters).fetch()
-
-    return {
-      projects
-    }
+  components: {
+    ProjectTileList
   }
 }
 </script>
-
-<style scoped>
-.fullpage {
-  min-height: 75vh;
-}
-</style>
