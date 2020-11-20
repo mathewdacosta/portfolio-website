@@ -3,9 +3,9 @@
     <section class="hero is-small has-background-white-ter">
       <div class="hero-body">
         <div class="container">
-          <nav class="title breadcrumb is-large" aria-label="breadcrumbs">
+          <nav class="title section-title breadcrumb is-large" aria-label="breadcrumbs">
             <ul>
-              <li class="is-active is-family-secondary"><router-link to="/projects">Projects</router-link></li>
+              <li class="is-active"><router-link to="/projects">Projects</router-link></li>
             </ul>
           </nav>
         </div>
@@ -17,12 +17,16 @@
           <nav class="column is-one-quarter">
             <b-menu>
               <b-menu-list label="Categories">
-                <b-menu-item label="All" :active="category == 'all'" @click="setCategory(undefined)" />
-                <b-menu-item label="Games" :active="category == 'games'" @click="setCategory('games')" />
-                <b-menu-item label="Ludum Dare" :active="category == 'ludum-dare'" @click="setCategory('ludum-dare')" />
-                <b-menu-item label="Minecraft" :active="category == 'minecraft'" @click="setCategory('minecraft')" />
-                <b-menu-item label="Uni" :active="category == 'university'" @click="setCategory('university')" />
-                <b-menu-item label="Web" :active="category == 'web'" @click="setCategory('web')" />
+                <b-menu-item label="All" :active="category === undefined" @click="setCategory(undefined)" />
+                <b-menu-item label="Games" :active="category === 'games'" @click="setCategory('games')" />
+                <b-menu-item label="Ludum Dare" :active="category === 'ludum-dare'" @click="setCategory('ludum-dare')" />
+                <b-menu-item label="Minecraft" :active="category === 'minecraft'" @click="setCategory('minecraft')" />
+                <b-menu-item label="Uni" :active="category === 'university'" @click="setCategory('university')" />
+              </b-menu-list>
+              <b-menu-list label="Technologies">
+                <b-menu-item label="C++" :active="category === 'cpp'" @click="setCategory('cpp')" />
+                <b-menu-item label="Java" :active="category === 'java'" @click="setCategory('java')" />
+                <b-menu-item label="Web" :active="category === 'web'" @click="setCategory('web')" />
               </b-menu-list>
             </b-menu>
           </nav>

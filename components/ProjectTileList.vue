@@ -1,23 +1,22 @@
 <template>
   <div class="project-tile-list">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent is-vertical is-4"
-        v-for="(projectColumn, index) in projectColumns"
-        :key="`project-column-${index}`">
+    <div class="columns is-multiline">
+      <div class="column is-one-third"
+        v-for="project in filteredProjects"
+        :key="project.slug"
+      >
         <router-link
-          class="tile is-child box"
-          v-for="project in projectColumn"
-          :key="project.slug"
-          :to="{ path: project.path }">
-            <p v-if="project.image">
-              <img
-                :src="require(`~/assets/images/${project.image}`)"
-                :alt="project.title"
-                style="width: 100%; border-radius: 4px;" />
-            </p>
-            <p v-if="project.context" class="has-text-grey-light">{{ project.context }}</p>
-            <p class="title is-size-4">{{ project.title }}</p>
-            <p class="subtitle is-size-5">{{ project.description }}</p>
+          class="box project-tile"
+          :to="project.path">
+          <p v-if="project.image">
+            <img
+              :src="require(`~/assets/images/${project.image}`)"
+              :alt="project.title"
+              style="width: 100%; border-radius: 4px;" />
+          </p>
+          <p v-if="project.context" class="has-text-grey-light section-title">{{ project.context }}</p>
+          <p class="title section-title is-size-4">{{ project.title }}</p>
+          <p class="subtitle is-size-6">{{ project.description }}</p>
         </router-link>
       </div>
     </div>
@@ -47,6 +46,10 @@ export default {
         })
 
       return columns;
+    },
+    filteredProjects() {
+      return this.projects
+        .filter(project => this.category === undefined || project.categories.includes(this.category))
     }
   }
 }
@@ -55,5 +58,9 @@ export default {
 <style scoped>
 .project-tile-list {
   min-height: 60vh;
+}
+
+.project-tile {
+  height: 100%;
 }
 </style>

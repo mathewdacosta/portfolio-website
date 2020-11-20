@@ -6,6 +6,7 @@ image: tricky-goals.jpg
 categories:
   - games
   - university
+  - unity
 buttons:
   - text: Download from Itch.io
     href: https://mdcfe.itch.io/tricky-goals

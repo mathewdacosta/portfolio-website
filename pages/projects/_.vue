@@ -3,7 +3,7 @@
     <section class="hero is-small has-background-white-ter">
       <div class="hero-body">
         <div class="container">
-          <nav class="title breadcrumb is-large" aria-label="breadcrumbs">
+          <nav class="title section-title breadcrumb is-large" aria-label="breadcrumbs">
             <ul>
               <li><router-link to="/projects">Projects</router-link></li>
               <li class="is-active"><a href="#" aria-current="page">{{ article.title }}</a></li>

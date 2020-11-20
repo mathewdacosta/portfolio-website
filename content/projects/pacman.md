@@ -6,6 +6,7 @@ image: pacman.png
 categories:
   - games
   - university
+  - cpp
 buttons:
   - text: View on GitHub
     href: https://github.com/mdacoffee/FOGGS-Pacman

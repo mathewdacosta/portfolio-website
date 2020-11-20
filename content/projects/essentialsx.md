@@ -5,6 +5,7 @@ context: "Maintainer of"
 image: essentialsx.png
 categories:
   - minecraft
+  - java
 buttons:
   - text: Visit website
     href: https://essentialsx.net/
