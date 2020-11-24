@@ -4,11 +4,11 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'portfolio',
+    title: 'Mathew Dacosta',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Computer Games Programming student and open source developer' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -53,5 +53,5 @@ export default {
   // Buefy options (https://github.com/buefy/nuxt-buefy + https://buefy.org/documentation/constructor-options/)
   buefy: {
     css: false // include our customised CSS instead
-  }
+  },
 }

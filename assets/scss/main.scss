@@ -107,6 +107,9 @@ $family-monospace: "Roboto Mono", monospace;
     text-transform: uppercase;
 }
 
+// Import our custom styles
+@import "./transitions.scss";
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
