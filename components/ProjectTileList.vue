@@ -1,6 +1,9 @@
 <template>
   <div class="project-tile-list">
-    <div class="columns is-multiline">
+    <transition-group
+      name="project-list"
+      tag="div"
+      class="columns is-multiline">
       <div class="column is-one-third"
         v-for="project in filteredProjects"
         :key="project.slug"
@@ -19,7 +22,7 @@
           <p class="subtitle is-size-6">{{ project.description }}</p>
         </router-link>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -63,4 +66,18 @@ export default {
 .project-tile {
   height: 100%;
 }
+
+/* Transitions */
+.project-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.project-list-enter-active, .project-list-leave-active, .project-list-move {
+  transition: all 0.5s;
+}
+.project-list-enter, .project-list-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 </style>
