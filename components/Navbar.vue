@@ -10,7 +10,7 @@
       <b-navbar-item tag="router-link" :to="{ path: '/projects' }">
         Projects
       </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: '/#contact' }">
+      <b-navbar-item tag="router-link" :to="{ path: '/contact' }">
         Contact
       </b-navbar-item>
     </template>
