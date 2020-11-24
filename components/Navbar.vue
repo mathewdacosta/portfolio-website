@@ -1,8 +1,8 @@
 <template>
-  <b-navbar spaced shadow fixed-top type="is-dark">
+  <b-navbar spaced fixed-top type="is-dark">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <strong class="is-size-4">Mathew Dacosta</strong>
+        <strong class="is-size-4 section-title">Mathew Dacosta</strong>
       </b-navbar-item>
     </template>
 
