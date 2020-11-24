@@ -32,9 +32,9 @@
         <project-overview>
           <template slot="main">
             <div class="content">
-              <h1>Pacman</h1>
+              <h1 class="section-title">Pacman</h1>
               <p>
-                A simple recreation of Pacman using C++ and an existing library for 2D graphics, audio and input.
+                A simple recreation of Pac-Man using C++ and an existing framework for 2D graphics, audio and input.
               </p>
             </div>
             <div>
@@ -60,7 +60,7 @@
         <project-overview main-side="right">
           <template slot="main">
             <div class="content">
-              <h1>Tricky Goals</h1>
+              <h1 class="section-title">Tricky Goals</h1>
               <p>
                 A small Unity game created as part of a team for an entry-level game jam.
               </p>
@@ -90,7 +90,7 @@
         <project-overview>
           <template slot="main">
             <div class="content">
-              <h1>Placeholder #2</h1>
+              <h1 class="section-title">Placeholder #2</h1>
               <p>
                 Another project can go here with text etc
               </p>

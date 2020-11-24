@@ -1,6 +1,6 @@
 ---
 title: Pacman
-description: A simple recreation of the classic Pac-Man arcade game in C++.
+description: A simple recreation of Pac-Man in C++ using existing framework for 2D graphics, audio and input.
 context: "University project"
 image: pacman.png
 categories:
