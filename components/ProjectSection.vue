@@ -2,7 +2,7 @@
   <router-link
     :class="boxClass"
     v-bind="$attrs" >
-    <div class="level">
+    <div class="level is-mobile">
       <div class="level-left">
         <div class="level-item">
           <h1 :class="titleClass">{{ title }}</h1>
