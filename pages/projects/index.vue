@@ -11,66 +11,44 @@
         </div>
       </div>
     </section>
-    <section class="section fullpage">
+    <section class="section">
       <div class="container">
-        <div class="columns">
-          <nav class="column is-one-quarter">
-            <b-menu>
-              <b-menu-list label="Categories">
-                <b-menu-item label="All" :active="category === undefined" @click="setCategory(undefined)" />
-                <b-menu-item label="Games" :active="category === 'games'" @click="setCategory('games')" />
-                <b-menu-item label="Ludum Dare" :active="category === 'ludum-dare'" @click="setCategory('ludum-dare')" />
-                <b-menu-item label="Minecraft" :active="category === 'minecraft'" @click="setCategory('minecraft')" />
-                <b-menu-item label="Uni" :active="category === 'university'" @click="setCategory('university')" />
-              </b-menu-list>
-              <b-menu-list label="Technologies">
-                <b-menu-item label="C++" :active="category === 'cpp'" @click="setCategory('cpp')" />
-                <b-menu-item label="Java" :active="category === 'java'" @click="setCategory('java')" />
-                <b-menu-item label="Web" :active="category === 'web'" @click="setCategory('web')" />
-              </b-menu-list>
-            </b-menu>
-          </nav>
-
-          <div class="column">
-            <project-tile-list :projects="projects" :category="category" />
-          </div>
-        </div>
+        <project-section
+          to="/projects/games"
+          title="Games"
+          icon="gamepad-variant"
+          icon-tilt
+          bg-colour="primary"
+          text-colour="white" />
+        <project-section
+          to="/projects/web"
+          title="Web"
+          icon="code-braces"
+          bg-colour="secondary"
+          text-colour="white" />
+        <project-section
+          to="/projects/opensource"
+          title="Open Source"
+          icon="git"
+          bg-colour="tertiary"
+          text-colour="white" />
+        <project-section
+          to="/projects/archive"
+          title="Archive"
+          icon="package-variant-closed"
+          bg-colour="grey"
+          text-colour="white" />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import ProjectTileList from '~/components/ProjectTileList'
+import ProjectSection from '~/components/ProjectSection'
 
 export default {
-  async asyncData ({ $content, app, query, error }) {
-    const dir = `/projects`
-    const projects = await $content({ deep: true }).where({ dir }).fetch()
-
-    return {
-      projects
-    }
-  },
-  data () {
-    return {
-      category: this.$route.query.category
-    }
-  },
-  methods: {
-    setCategory (category) {
-      this.category = category
-      this.$router.replace({
-        path: '/projects',
-        query: {
-          ...this.$route.query,
-          category
-        }
-      })
-    }
-  },
   components: {
-    ProjectTileList
+    ProjectSection
   }
 }
 </script>

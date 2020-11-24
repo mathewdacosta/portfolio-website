@@ -29,7 +29,8 @@
           <round-button
             tag="a"
             :href="button.href"
-            :icon-left="button.icon">
+            :icon-left="button.icon"
+            target="_blank" >
             {{ button.text }}
           </round-button>
         </span>
