@@ -3,21 +3,27 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
-// Set your colors
-$primary: #0e52e2;
+// Colors
+// https://www.color-hex.com/color-palette/101199
+$primary: #2d99ae;
 $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
 $primary-invert: findColorInvert($primary);
 
-$secondary: #5419E3;
+$secondary: #0c5776;
 $secondary-light: findLightColor($secondary);
 $secondary-dark: findDarkColor($secondary);
 $secondary-invert: findColorInvert($secondary);
 
-$tertiary: #12bbd1;
+$tertiary: #001c44;
 $tertiary-light: findLightColor($tertiary);
 $tertiary-dark: findDarkColor($tertiary);
 $tertiary-invert: findColorInvert($tertiary);
+
+$quarternary: #bcfefe;
+$quarternary-light: findLightColor($quarternary);
+$quarternary-dark: findDarkColor($quarternary);
+$quarternary-invert: findColorInvert($quarternary);
 
 // Lists and maps
 $custom-colors: (
@@ -32,6 +38,12 @@ $custom-colors: (
     $tertiary-invert,
     $tertiary-light,
     $tertiary-dark,
+  ),
+  "quarternary": (
+    $quarternary,
+    $quarternary-invert,
+    $quarternary-light,
+    $quarternary-dark,
   ),
 );
 $custom-shades: null !default;
@@ -109,6 +121,7 @@ $family-monospace: "Roboto Mono", monospace;
 
 // Import our custom styles
 @import "./transitions.scss";
+@import "./scroll.scss";
 
 // Import Bulma and Buefy styles
 @import "~bulma";

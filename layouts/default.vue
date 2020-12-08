@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <!-- <navbar /> -->
     <nuxt />
     <!--
     <section class="hero is-small is-warning">
@@ -11,6 +11,7 @@
       </div>
     </section>
     -->
+    <!--
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered has-text-weight-semibold">
@@ -20,5 +21,6 @@
         </div>
       </div>
     </footer>
+    -->
   </div>
 </template>

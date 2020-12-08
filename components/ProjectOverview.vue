@@ -43,3 +43,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+div.column {
+  border-radius: 4px;
+}
+</style>

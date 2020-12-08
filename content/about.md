@@ -2,7 +2,7 @@
 title: "About section"
 ---
 
-I'm an amateur game developer, having produced a [few small games](/projects/games).  
-I'm currently working towards a degree in Computer Games Programming. You can see my various university portfolio projects [here](/projects/archive?category=university).
+I'm an amateur game developer, currently working towards a degree in Computer Games Programming.  
+I've programmed games using technologies such as C++, OpenGL, and Unity.
 
-I also work on open-source Minecraft projects. You can see more about these [here](/projects/archive?category=minecraft).
+Outside of game development, I also lead development on the open-source [EssentialsX](https://github.com/EssentialsX/Essentials) plugin for Minecraft servers.
