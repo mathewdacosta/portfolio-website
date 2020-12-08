@@ -121,7 +121,7 @@
           </template>
           <template slot="image">
             <b-image
-            :src="require('~/assets/images/pacman.png')"
+            :src="require('~/assets/images/ld42.png')"
             alt="Screenshot of Pacman"
             ratio="16by10" /> <!-- TODO better image -->
           </template>
