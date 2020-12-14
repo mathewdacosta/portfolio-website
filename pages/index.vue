@@ -210,6 +210,19 @@ export default {
     return {
       about
     };
+  },
+  head() {
+    return {
+      title: 'Mathew Dacosta',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Mathew Dacosta, Computer Games Programming student and open source developer'
+        }
+      ]
+    }
   }
 }
 </script>

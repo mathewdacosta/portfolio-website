@@ -8,7 +8,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Computer Games Programming student and open source developer' }
+      { hid: 'description', name: 'description', content: 'Computer Games Programming student, open source developer' },
+      { hid: 'keywords', name: 'keywords', content: 'game developer, programming, c++, opengl, development, software' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -54,4 +55,32 @@ export default {
   buefy: {
     css: false // include our customised CSS instead
   },
+
+  // PWA module configuration (https://pwa.nuxtjs.org/)
+  pwa: {
+    icon: {
+      sizes: [16, 32, 64, 120, 144, 152, 192, 384, 512]
+    },
+    meta: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      mobileApp: true,
+      favicon: true,
+
+      name: 'Mathew Dacosta',
+      author: 'Mathew Dacosta',
+      description: 'Computer Games Programming student, open source developer',
+      theme_color: '#2d99ae',
+
+      twitterSite: '@MathewDacosta'
+    },
+    manifest: {
+      name: 'Mathew Dacosta\'s Portfolio',
+      short_name: 'Mathew Dacosta',
+      background_color: '#2d99ae',
+      // Prevent annoying "add to home screen" prompt - I'm not an app
+      display: 'browser'
+    },
+    workbox: { }
+  }
 }
