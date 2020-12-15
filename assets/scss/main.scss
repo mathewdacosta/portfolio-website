@@ -25,6 +25,12 @@ $quarternary-light: findLightColor($quarternary);
 $quarternary-dark: findDarkColor($quarternary);
 $quarternary-invert: findColorInvert($quarternary);
 
+// Links
+$link: $primary;
+$link-hover: $primary-dark;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
 // Lists and maps
 $custom-colors: (
   "secondary": (
@@ -106,11 +112,6 @@ $colors: mergeColorMaps(
     ),
     $custom-colors
 );
-
-// Links
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
 
 $family-monospace: "Roboto Mono", monospace;
 
