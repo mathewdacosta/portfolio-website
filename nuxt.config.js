@@ -72,7 +72,12 @@ export default {
       description: 'Computer Games Programming student, open source developer',
       theme_color: '#2d99ae',
 
-      twitterSite: '@MathewDacosta'
+      ogHost: "https://mathewdacosta.dev",
+      ogImage: true,
+
+      twitterCard: 'summary',
+      twitterSite: '@MathewDacosta',
+      twitterCreator: '@MathewDacosta'
     },
     manifest: {
       name: 'Mathew Dacosta\'s Portfolio',
