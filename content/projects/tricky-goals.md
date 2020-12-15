@@ -2,7 +2,7 @@
 title: Tricky Goals
 description: A small Unity game created as part of a team for an entry-level game jam.
 context: "Team game jam entry"
-image: tricky-goals.jpg
+image: tricky-goals.webp
 categories:
   - games
   - university

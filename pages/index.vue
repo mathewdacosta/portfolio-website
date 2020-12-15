@@ -8,7 +8,7 @@
             <div class="level-right">
               <div class="avatar-image">
                 <b-image
-                  :src="require('~/assets/images/avatar.png')"
+                  :src="require('~/assets/images/avatar.webp')"
                   alt="Mathew Dacosta"
                   ratio="1by1"
                   width="200px"
@@ -101,7 +101,7 @@
           </template>
           <template slot="image">
             <b-image
-            :src="require('~/assets/images/tricky-goals.jpg')"
+            :src="require('~/assets/images/tricky-goals.webp')"
             alt="Screenshot of Tricky Goals gameplay"
             ratio="16by10" /> <!-- TODO better image -->
           </template>
