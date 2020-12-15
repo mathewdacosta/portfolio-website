@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-primary is-fullheight is-fancy-gradient">
+    <section class="hero is-primary is-medium is-fancy-gradient">
       <div class="hero-body">
         <div class="container has-text-right">
           <div class="level is-mobile">
