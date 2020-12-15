@@ -204,7 +204,7 @@
             </nav>
           </div>
           <div class="column is-one-third">
-            <a class="twitter-timeline" data-lang="en" data-theme="light" href="https://twitter.com/MathewDacosta?ref_src=twsrc%5Etfw">Tweets by MathewDacosta</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-height="600" data-lang="en" data-theme="light" href="https://twitter.com/MathewDacosta?ref_src=twsrc%5Etfw">Tweets by MathewDacosta</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </div>
       </div>
