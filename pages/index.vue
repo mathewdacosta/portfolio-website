@@ -176,7 +176,7 @@
           <div class="column">
             <div class="content has-text-centered">
               <p>
-                You can get in touch on <a href="https://twitter.com/mathewdacosta">Twitter</a>, <a href="https://github.com/mathewdacosta">GitHub</a>, or <a href="https://linkedin.com/in/mathew-dacosta">LinkedIn</a>, or follow me for updates on my projects.
+                You can follow me for updates on my projects on <a href="https://twitter.com/mathewdacosta">Twitter</a> or <a href="https://github.com/mathewdacosta">GitHub</a>, or get in touch on <a href="https://linkedin.com/in/mathew-dacosta">LinkedIn</a>.
               </p>
             </div>
             <br>
