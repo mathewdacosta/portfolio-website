@@ -6,13 +6,19 @@
   >
     <template slot="end">
       <b-navbar-item href="#projects">
-        Projects
+        <span class="is-size-5">
+          Projects
+        </span>
       </b-navbar-item>
       <b-navbar-item href="#about">
-        About
+        <span class="is-size-5">
+          About
+        </span>
       </b-navbar-item>
       <b-navbar-item href="#contact">
-        Contact
+        <span class="is-size-5">
+          Contact
+        </span>
       </b-navbar-item>
     </template>
   </b-navbar>

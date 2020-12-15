@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-primary is-fullheight is-bold">
+    <section class="hero is-primary is-fullheight is-fancy-gradient">
       <div class="hero-body">
         <div class="container has-text-right">
           <div class="level is-mobile">
@@ -18,16 +18,37 @@
               </div>
             </div>
           </div>
-          <h1 class="title">
+          <h1 class="title is-size-2">
             Mathew Dacosta
           </h1>
-          <h2 class="subtitle">
+          <h2 class="subtitle is-size-4">
             Computer&nbsp;Games&nbsp;Programming student,
             open&nbsp;source&nbsp;developer
           </h2>
           <!-- alignment go <brrrrrr /> -->
           <!-- this is a lazy way to achieve this but it works -->
-          <br><br><br>
+          <br>
+
+          <a class="pl-4" href="https://twitter.com/mathewdacosta">
+            <b-icon
+              icon="twitter"
+              size="is-medium"
+              type="is-white" />
+          </a>
+          <a class="pl-4" href="https://github.com/mathewdacosta">
+            <b-icon
+              icon="github"
+              size="is-medium"
+              type="is-white" />
+          </a>
+          <a class="pl-4" href="https://linkedin.com/in/mathew-dacosta">
+            <b-icon
+              icon="linkedin"
+              size="is-medium"
+              type="is-white" />
+          </a>
+          <br>
+          <br>
         </div>
       </div>
       <div class="hero-foot">
@@ -50,7 +71,7 @@
             <div class="content">
               <h1>Pacman</h1>
               <p>
-                A simple recreation of Pac-Man using C++ alongside an existing library for 2D graphics, audio and input.
+                A recreation of Pac-Man using C++ alongside an existing library for 2D graphics, audio and input.
               </p>
             </div>
             <div>
@@ -84,7 +105,7 @@
                 Swing your hammer to hit as many balls into the goal as possible, but avoid the bombs!
               </p>
               <p>
-                Tricky Goals was a game created as part of a team for an entry-level game jam.
+                Tricky Goals was created with a team over four days for the Staffordshire University GT:Jam.
               </p>
             </div>
             <div>
@@ -103,7 +124,7 @@
             <b-image
             :src="require('~/assets/images/tricky-goals.webp')"
             alt="Screenshot of Tricky Goals gameplay"
-            ratio="16by10" /> <!-- TODO better image -->
+            ratio="16by9" />
           </template>
         </project-overview>
 
@@ -151,42 +172,40 @@
 
     <section class="section">
       <div class="container">
-        <div class="px-6">
-          <nav class="level">
-            <div class="level-item">
-              <b-button
-                type="is-primary"
-                size="is-medium"
-                rounded
-                icon-left="linkedin"
-                tag="a"
-                href="https://linkedin.com/in/mathew-dacosta">
-                LinkedIn
-              </b-button>
+        <div class="columns">
+          <div class="column">
+            <div class="content has-text-centered">
+              <p>
+                You can get in touch on <a href="https://twitter.com/mathewdacosta">Twitter</a>, <a href="https://github.com/mathewdacosta">GitHub</a>, or <a href="https://linkedin.com/in/mathew-dacosta">LinkedIn</a>, or follow me for updates on my projects.
+              </p>
             </div>
-            <div class="level-item">
-              <b-button
-                type="is-primary"
-                size="is-medium"
-                rounded
-                icon-left="github"
-                tag="a"
-                href="https://github.com/mathewdacosta">
-                GitHub
-              </b-button>
-            </div>
-            <div class="level-item">
-              <b-button
-                type="is-primary"
-                size="is-medium"
-                rounded
-                icon-left="twitter"
-                tag="a"
-                href="https://twitter.com/mathewdacosta">
-                Twitter
-              </b-button>
-            </div>
-          </nav>
+            <br>
+            <nav class="level">
+              <div class="level-item">
+                <a class="px-4" href="https://twitter.com/mathewdacosta">
+                  <b-icon
+                    icon="twitter"
+                    size="is-medium"
+                    type="is-primary" />
+                </a>
+                <a class="px-4" href="https://github.com/mathewdacosta">
+                  <b-icon
+                    icon="github"
+                    size="is-medium"
+                    type="is-primary" />
+                </a>
+                <a class="px-4" href="https://linkedin.com/in/mathew-dacosta">
+                  <b-icon
+                    icon="linkedin"
+                    size="is-medium"
+                    type="is-primary" />
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="column is-one-third">
+            <a class="twitter-timeline" data-lang="en" data-theme="light" href="https://twitter.com/MathewDacosta?ref_src=twsrc%5Etfw">Tweets by MathewDacosta</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
         </div>
       </div>
     </section>
@@ -227,7 +246,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .avatar-image {
   width: 200px;
   height: 200px;
@@ -239,5 +258,9 @@ export default {
 
 .level-item > a.button {
   min-width: 152px;
+}
+
+.hero.is-fancy-gradient {
+  background-image: linear-gradient(141deg, #34b1aa 0%, #2d99ae 71%, #237faa 100%);
 }
 </style>
