@@ -235,7 +235,8 @@ export default {
       title: 'Mathew Dacosta',
       script: [
         {
-          src: 'https://platform.twitter.com/widgets.js'
+          src: 'https://platform.twitter.com/widgets.js',
+          body: true
         }
       ],
       meta: [
