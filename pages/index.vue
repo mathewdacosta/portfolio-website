@@ -204,8 +204,7 @@
             </nav>
           </div>
           <div class="column is-one-third">
-            <a class="twitter-timeline" data-height="600" data-lang="en" data-theme="light" href="https://twitter.com/MathewDacosta?ref_src=twsrc%5Etfw">The Twitter timeline is not currently available.</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" data-cfasync="false"></script>
+            <a class="twitter-timeline" data-chrome="nofooter noborders" data-height="600" href="https://twitter.com/MathewDacosta?ref_src=twsrc%5Etfw"></a>
           </div>
         </div>
       </div>
@@ -234,6 +233,11 @@ export default {
   head() {
     return {
       title: 'Mathew Dacosta',
+      script: [
+        {
+          src: 'https://platform.twitter.com/widgets.js'
+        }
+      ],
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
