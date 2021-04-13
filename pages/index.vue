@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-primary is-medium is-fancy-gradient">
+    <section class="hero is-primary is-fancy-gradient">
       <div class="hero-body">
         <div class="container has-text-right">
           <div class="level is-mobile">
@@ -22,8 +22,8 @@
             Mathew Dacosta
           </h1>
           <h2 class="subtitle is-size-4">
-            Computer&nbsp;Games&nbsp;Programming student,
-            open&nbsp;source&nbsp;developer
+            Games programmer,
+            open source developer
           </h2>
           <!-- alignment go <brrrrrr /> -->
           <!-- this is a lazy way to achieve this but it works -->
@@ -69,6 +69,71 @@
         <project-overview>
           <template slot="main">
             <div class="content">
+              <h1>Mario</h1>
+              <p>
+                A 2D game inspired by the original Mario Bros game, built in a custom engine using C++ and SDL.
+              </p>
+            </div>
+            <div>
+              <b-button
+                type="is-primary"
+                rounded
+                icon-left="github"
+                tag="a"
+                href="https://github.com/mdacosta/GEC-Mario"
+                target="_blank"> <!-- TODO single-page site -->
+                View source
+              </b-button>
+            </div>
+          </template>
+          <template slot="image">
+            <b-image
+            :src="require('~/assets/images/pacman.png')"
+            alt="Screenshot of Mario"
+            ratio="16by10" /> <!-- TODO image of Mario -->
+          </template>
+        </project-overview>
+
+        <br class="is-hidden-mobile-only" />
+        <hr class="is-hidden-tablet project-separator" />
+
+        <project-overview main-side="right">
+          <template slot="main">
+            <div class="content">
+              <h1>Tricky Goals</h1>
+              <p>
+                Swing your hammer to hit as many balls into the goal as possible, but avoid the bombs!
+              </p>
+              <p>
+                Tricky Goals was a game jam entry, created with a team over four days as part of the Staffordshire University welcome week games jam.
+              </p>
+            </div>
+            <div>
+              <b-button
+                type="is-primary"
+                rounded
+                icon-left="chevron-right-circle-outline"
+                tag="a"
+                href="https://mdcfe.itch.io/tricky-goals"
+                target="_blank">
+                View on Itch.io
+              </b-button>
+            </div>
+          </template>
+          <template slot="image">
+            <b-image
+              :src="require('~/assets/images/tricky-goals.webp')"
+              alt="Screenshot of Tricky Goals gameplay"
+              ratio="16by9" />
+          </template>
+        </project-overview>
+
+        <br class="is-hidden-mobile-only" />
+        <hr class="is-hidden-tablet" />
+
+        <project-overview>
+          <template slot="main">
+            <div class="content">
               <h1>Pacman</h1>
               <p>
                 A recreation of Pac-Man using C++ alongside an existing library for 2D graphics, audio and input.
@@ -89,60 +154,6 @@
           <template slot="image">
             <b-image
             :src="require('~/assets/images/pacman.png')"
-            alt="Screenshot of Pacman"
-            ratio="16by10" /> <!-- TODO better image -->
-          </template>
-        </project-overview>
-
-        <br class="is-hidden-mobile-only" />
-        <hr class="is-hidden-tablet project-separator" />
-
-        <project-overview main-side="right">
-          <template slot="main">
-            <div class="content">
-              <h1>Tricky Goals</h1>
-              <p>
-                Swing your hammer to hit as many balls into the goal as possible, but avoid the bombs!
-              </p>
-              <p>
-                Tricky Goals was created with a team over four days for the Staffordshire University GT:Jam.
-              </p>
-            </div>
-            <div>
-              <b-button
-                type="is-primary"
-                rounded
-                icon-left="chevron-right-circle-outline"
-                tag="a"
-                href="https://mdcfe.itch.io/tricky-goals"
-                target="_blank">
-                View on Itch.io
-              </b-button>
-            </div>
-          </template>
-          <template slot="image">
-            <b-image
-            :src="require('~/assets/images/tricky-goals.webp')"
-            alt="Screenshot of Tricky Goals gameplay"
-            ratio="16by9" />
-          </template>
-        </project-overview>
-
-        <br class="is-hidden-mobile-only" />
-        <hr class="is-hidden-tablet" />
-
-        <project-overview>
-          <template slot="main">
-            <div class="content">
-              <h1>Placeholder</h1>
-              <p>
-                More exciting projects coming soon!
-              </p>
-            </div>
-          </template>
-          <template slot="image">
-            <b-image
-            :src="require('~/assets/images/ld42.png')"
             alt="Screenshot of Pacman"
             ratio="16by10" /> <!-- TODO better image -->
           </template>
@@ -176,7 +187,7 @@
           <div class="column">
             <div class="content has-text-centered">
               <p>
-                You can follow me for updates on my projects on <a href="https://twitter.com/mathewdacosta">Twitter</a> or <a href="https://github.com/mathewdacosta">GitHub</a>, or get in touch on <a href="https://linkedin.com/in/mathew-dacosta">LinkedIn</a>.
+                You can follow me for updates on my projects or get in touch on <a href="https://twitter.com/mathewdacosta">Twitter</a>, <a href="https://github.com/mathewdacosta">GitHub</a> or <a href="https://linkedin.com/in/mathew-dacosta">LinkedIn</a>.
               </p>
             </div>
             <br>
