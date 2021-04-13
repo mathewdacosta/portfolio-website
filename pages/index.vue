@@ -74,14 +74,23 @@
                 A 2D game inspired by the original Mario Bros game, built in a custom engine using C++ and SDL.
               </p>
             </div>
-            <div>
+            <div class="buttons">
+              <b-button
+                type="is-primary"
+                rounded
+                icon-left="home-outline"
+                tag="a"
+                href="https://mathewdacosta.github.io/GEC-Mario"
+                target="_blank">
+                View site
+              </b-button>
               <b-button
                 type="is-primary"
                 rounded
                 icon-left="github"
                 tag="a"
-                href="https://github.com/mdacosta/GEC-Mario"
-                target="_blank"> <!-- TODO single-page site -->
+                href="https://github.com/mathewdacosta/GEC-Mario"
+                target="_blank">
                 View source
               </b-button>
             </div>
@@ -145,7 +154,7 @@
                 rounded
                 icon-left="github"
                 tag="a"
-                href="https://github.com/mdacosta/FOGGS-Pacman"
+                href="https://github.com/mathewdacosta/FOGGS-Pacman"
                 target="_blank">
                 View source
               </b-button>
