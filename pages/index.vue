@@ -69,10 +69,9 @@
         <project-overview>
           <template slot="main">
             <div class="content">
-              <h1>Mario</h1>
-              <p>
-                A 2D game inspired by the original Mario Bros game, built in a custom engine using C++ and SDL.
-              </p>
+              <h1>GEC Mario Bros</h1>
+              <p>A 2D game inspired by the original Mario Bros game.</p>
+              <p>GEC Mario Bros was created as part of a university assignment to create a 2D game engine using C++ and SDL.</p>
             </div>
             <div class="buttons">
               <b-button
@@ -82,7 +81,7 @@
                 tag="a"
                 href="https://mathewdacosta.github.io/GEC-Mario"
                 target="_blank">
-                View site
+                Visit site
               </b-button>
               <b-button
                 type="is-primary"
@@ -97,9 +96,9 @@
           </template>
           <template slot="image">
             <b-image
-            :src="require('~/assets/images/pacman.png')"
-            alt="Screenshot of Mario"
-            ratio="16by10" /> <!-- TODO image of Mario -->
+            :src="require('~/assets/images/mario.png')"
+            alt="Screenshot of GEC Mario Bros"
+            ratio="16by13" />
           </template>
         </project-overview>
 
@@ -114,7 +113,7 @@
                 Swing your hammer to hit as many balls into the goal as possible, but avoid the bombs!
               </p>
               <p>
-                Tricky Goals was a game jam entry, created with a team over four days as part of the Staffordshire University welcome week games jam.
+                Tricky Goals was created in Unity with a team as part of the four-day Staffordshire University welcome week games jam.
               </p>
             </div>
             <div>
@@ -144,9 +143,8 @@
           <template slot="main">
             <div class="content">
               <h1>Pacman</h1>
-              <p>
-                A recreation of Pac-Man using C++ alongside an existing library for 2D graphics, audio and input.
-              </p>
+              <p>A 2D game inspired by Pac-Man.</p>
+              <p>Pacman was written for a university assignment while learning C++, using a provided library for graphics, audio and input.</p>
             </div>
             <div>
               <b-button
@@ -164,7 +162,7 @@
             <b-image
             :src="require('~/assets/images/pacman.png')"
             alt="Screenshot of Pacman"
-            ratio="16by10" /> <!-- TODO better image -->
+            ratio="25by16" />
           </template>
         </project-overview>
       </div>
@@ -264,7 +262,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Mathew Dacosta, Computer Games Programming student and open source developer'
+          content: 'Mathew Dacosta: games programmer, open source developer'
         }
       ]
     }

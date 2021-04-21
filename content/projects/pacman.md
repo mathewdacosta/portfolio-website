@@ -9,7 +9,7 @@ categories:
   - cpp
 buttons:
   - text: View on GitHub
-    href: https://github.com/mdacoffee/FOGGS-Pacman
+    href: https://github.com/mathewdacosta/FOGGS-Pacman
     icon: github
 ---
 

@@ -19,7 +19,7 @@
             expanded
               icon-left="github"
               tag="a"
-              href="https://github.com/mdacoffee"> <!-- TODO change -->
+              href="https://github.com/mathewdacosta"> <!-- TODO change -->
               GitHub
             </round-button>
           </div>
@@ -28,7 +28,7 @@
             expanded
               icon-left="twitter"
               tag="a"
-              href="https://twitter.com/mdacoffee"> <!-- TODO fix icon + link to prof twitter -->
+              href="https://twitter.com/mathewdacosta">
               Twitter
             </round-button>
           </div>
