@@ -8,8 +8,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Computer Games Programming student, open source developer' },
-      { hid: 'keywords', name: 'keywords', content: 'game developer, programming, c++, opengl, development, software' }
+      { hid: 'description', name: 'description', content: 'Games programmer, open source developer' },
+      { hid: 'keywords', name: 'keywords', content: 'game developer, programming, c++, opengl, development, software, sdl, open source' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -69,7 +69,7 @@ export default {
 
       name: 'Mathew Dacosta',
       author: 'Mathew Dacosta',
-      description: 'Computer Games Programming student, open source developer',
+      description: 'Games programmer, open source developer',
       theme_color: '#2d99ae',
 
       ogHost: "https://mathewdacosta.dev",
