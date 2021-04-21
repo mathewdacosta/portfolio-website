@@ -8,7 +8,7 @@
             <div class="level-right">
               <div class="avatar-image">
                 <b-image
-                  :src="require('~/assets/images/avatar.webp')"
+                  :src="require('~/assets/images/avatar.jpg')"
                   alt="Mathew Dacosta"
                   ratio="1by1"
                   width="200px"
